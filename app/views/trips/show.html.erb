@@ -1,6 +1,6 @@
 <h2><%= @trip.name if @trip.name %></h2>
 
-<% if current_user.id != @trip.user_id%>
+<% if current_user && current_user.id != @trip.user_id%>
 	<% if Review.where(:id => current_user.id)%>
 		<%= link_to "Add review", {:controller => 'reviews', :action => 'new', :trip_id => @trip.id}, :class => "button small", :method => :get %>
 	<%else%>

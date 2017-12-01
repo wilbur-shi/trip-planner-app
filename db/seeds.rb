@@ -13,9 +13,9 @@
 end
 
 # Make user trips
-Trip.create user_id: 1, morning: 'Cafe Milano, Bancroft Way, Berkeley, CA', breakfast: 'Pancho Villa Taqueria, 16th Street, San Francisco, CA'
-Trip.create user_id: 2, morning: 'Golden Bear Cafe, Sather Road, Berkeley, CA', breakfast: 'Cafe 3, Durant Avenue, Berkeley, CA'
-Trip.create user_id: 3, morning: 'U Cha, Bancroft Way, Berkeley, CA', breakfast: 'CREAM Berkeley, Telegraph Avenue, Berkeley, CA'
+Trip.create user_id: 1, name: 'Wilbur Trip', morning: 'Cafe Milano, Bancroft Way, Berkeley, CA', breakfast: 'Pancho Villa Taqueria, 16th Street, San Francisco, CA'
+Trip.create user_id: 2, name: 'Murad Trip', morning: 'Golden Bear Cafe, Sather Road, Berkeley, CA', breakfast: 'Cafe 3, Durant Avenue, Berkeley, CA'
+Trip.create user_id: 3, name: 'David Trip', morning: 'U Cha, Bancroft Way, Berkeley, CA', breakfast: 'CREAM Berkeley, Telegraph Avenue, Berkeley, CA'
 
 # Make user reviews
 Review.create user_id: 1, trip_id: 2, title: 'swagout', description: 'Great place!'

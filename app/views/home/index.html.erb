@@ -6,10 +6,8 @@
  <!-- <iframe height = "400px" width="100%" frameborder = "0" scrolling = "no" src="home/sad" allowfullscreen></iframe> -->
  <% if @trips %>
 	<% @trips.each do |t| %>
-		<% if current_user.id == t.user_id %>
 			<h3><%= link_to t.name, trip_path(id: t.id), :method => :get %> </h3></br>
 			<!-- add other stuff from api call -->
-		<%end%>
 	<%end%>
 <%else %>
 	<p>You got no trips boyy</p>

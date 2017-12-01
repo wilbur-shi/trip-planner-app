@@ -1,26 +1,18 @@
 # README
+Create your own Trips!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+With the help of the Google Places API, search for places you love to visit in your
+ideal trip! Create trips for your friends and others to view and utilize when visiting
+your area.
 
-Things you may want to cover:
+Write reviews!
 
-* Ruby version
+Create the best trips and get the highest ratings! Compete with your friends to see
+who can create the best trips. Write reviews for other trips that you like and critique 
+other trips!
 
-* System dependencies
+Find Trips that You Will Love!
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# trip-planner-app
+With our application, you no longer need to worry about visiting an area and not knowing
+where to go or what to do! Search for and pick any trips in a given area and plan out 
+your day!
