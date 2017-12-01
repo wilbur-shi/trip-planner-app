@@ -50,8 +50,9 @@
     </style>
   </head>
   <body>
-    <input id="pac-input" class="controls" type="text"
-        placeholder="Enter a location">
+    <%= text_field_tag :searchbarn %>
+    <%= button_to "Search", show_search_trips_path, :class => "button small", :method => :get %> 
+
     <div id="map"></div>
     <div id="infowindow-content">
       <span id="place-name"  class="title"></span><br>
@@ -76,7 +77,7 @@
           zoom: 13
         });
 
-        var input = document.getElementById('pac-input');
+        var input = document.getElementById('searchbarn');
 
         var autocomplete = new google.maps.places.Autocomplete(
             input, {placeIdOnly: true});

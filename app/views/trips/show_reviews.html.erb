@@ -1,11 +1,7 @@
-<h2>User: <%= @user.email if @user.email %></h2>
-
-<%= button_to "View my trips", my_trips_path, :class => "button small", :method => :get %> 
-
-<h2>Your Reviews</h2>
+<h1>Reviews for <%= @trip.name %></h1>
 <% if @reviews %>
 	<% @reviews.each do |r| %>
-		<% if current_user.id == r.user_id %>
+		<% if @trip.id == r.trip_id %>
 			<%if r.title%>
 				<h3><%=r.title%></h3>
 			<%else%>
@@ -17,5 +13,6 @@
 		<%end%>
 	<%end%>
 <%else %>
-	<p>you got no reviews boyy</p>
+	<p>This trip has no reviews boyy</p>
 <%end%>
+

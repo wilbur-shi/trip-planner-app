@@ -1,0 +1,11 @@
+<h3>Create a review</h3>
+
+<%= simple_form_for @review do |f| %>
+  <%= f.input :title, label: "Title" %>
+  <%= f.input :rating, label: "Rating", collection: 1..5, selected: 5 %>
+  <%= f.input :description, label: "Description", :as => :text %>
+  <%= f.hidden_field :trip_id, :value => @trip_id %>
+
+<%= button_to "Save review", reviews_path, :class => "button small", :method => :post %> 
+<% end %>
+

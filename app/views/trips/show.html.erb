@@ -1,0 +1,25 @@
+<h2><%= @trip.name if @trip.name %></h2>
+
+<% if current_user.id != @trip.user_id%>
+	<% if Review.where(:id => current_user.id)%>
+		<%= link_to "Add review", {:controller => 'reviews', :action => 'new', :trip_id => @trip.id}, :class => "button small", :method => :get %>
+	<%else%>
+		<%= link_to "Edit review", {:controller => 'reviews', :action => 'edit', :trip_id => @trip.id}, :class => "button small", :method => :get %>
+	<%end%>
+<%end%>
+
+<h3>Your day</h3>
+<!-- {:controller => 'reviews', :action => 'new', :trip_id => @trip.id} #These will be API calls to show information, render a separate layout -->
+<p>Morning: <%= @trip.morning %></p>
+<p>Breakfast: <%= @trip.breakfast %></p>
+<p>Noon: <%= @trip.noon %></p>
+<p>Lunch: <%= @trip.lunch %></p>
+<p>Afternoon: <%= @trip.afternoon %></p>
+<p>Dinner: <%= @trip.dinner %></p>
+<p>Evening: <%= @trip.evening %></p>
+<p>Night: <%= @trip.night %></p>
+
+<h3><%= link_to 'Reviews', show_trip_reviews_path(:id => @trip.id), :method => :get %> </h3>
+
+
+

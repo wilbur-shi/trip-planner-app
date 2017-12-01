@@ -1,0 +1,98 @@
+<h3>Create a new Trip</h3>
+
+<%= simple_form_for @new_trip do |f| %>
+  <%= f.input :name, label: "Trip name" %>
+  <%= f.input :morning, label: "Morning activity" %>
+  <%= f.input :breakfast, label: "Breakfast" %>
+  <%= f.input :noon, label: "Noon activity" %>
+  <%= f.input :lunch, label: "Lunch" %>
+  <%= f.input :afternoon, label: "Afternoon activity" %>
+  <%= f.input :dinner, label: "Dinner" %>
+  <%= f.input :evening, label: "Evening activity" %>
+  <%= f.input :night, label: "Night activity" %>
+
+<%= button_to "Save trip", trips_path, :class => "button small", :method => :post %> 
+<% end %>
+
+
+       <script>
+      // This sample uses the Place Autocomplete widget requesting only a place
+      // ID to allow the user to search for and locate a place. The sample
+      // then reverse geocodes the place ID and displays an info window
+      // containing the place ID and other information about the place that the
+      // user has selected.
+
+      // This example requires the Places library. Include the libraries=places
+      // parameter when you first load the API. For example:
+      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      function init() {
+	      var swag = ['trip_morning', 'trip_breakfast', 'trip_noon', 'trip_lunch', 'trip_afternoon', 'trip_dinner', 'trip_evening', 'trip_night'];
+	      for (i = 0; i < swag.length; i++) {
+	      	var input = document.getElementById(swag[i]);
+	      	autocomplete = new google.maps.places.Autocomplete(input);
+	      	var place = autocomplete.getPlace();
+	      }
+	  }
+      // var input = document.getElementById('trip_morning');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+
+      // var input2 = document.getElementById('trip_breakfast');
+      // var autocomplete2 = new google.maps.places.Autocomplete(input2);
+      // var place2 = autocomplete.getPlace();
+      // }
+      // function initBreakfast() {
+      // var input = document.getElementById('trip_breakfast');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initNoon() {
+      // var input = document.getElementById('trip_noon');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initLunch() {
+      // var input = document.getElementById('trip_lunch');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initAfternoon() {
+      // var input = document.getElementById('trip_afternoon');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initDinner() {
+      // var input = document.getElementById('trip_dinner');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initEvening() {
+      // var input = document.getElementById('trip_evening');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+      // function initNight() {
+      // var input = document.getElementById('trip_night');
+      // var autocomplete = new google.maps.places.Autocomplete(input);
+      // var place = autocomplete.getPlace();
+      // }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=init"
+        async defer></script>
+<!--             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initBreakfast"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initNoon"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initLunch"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initAfternoon"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initDinner"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initEvening"
+        async defer></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3Jm_HKgLW1-kpvhnwp3NryCXrzDBdJRQ&libraries=places&callback=initNight"
+        async defer></script>
+ -->
+

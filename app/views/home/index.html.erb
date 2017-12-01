@@ -1,6 +1,22 @@
 <h3>Welcome to TripPlanner</h3>
 
-<p><%= link_to 'Users', users_path %></p>
+<!-- <p><%= link_to 'Users', users_path %></p> -->
 
 
- <iframe height = "400px" width="100%" frameborder = "0" scrolling = "no" src="home/sad" allowfullscreen></iframe>
+ <!-- <iframe height = "400px" width="100%" frameborder = "0" scrolling = "no" src="home/sad" allowfullscreen></iframe> -->
+ <% if @trips %>
+	<% @trips.each do |t| %>
+		<% if current_user.id == t.user_id %>
+			<h3><%= link_to t.name, trip_path(id: t.id), :method => :get %> </h3></br>
+			<!-- add other stuff from api call -->
+		<%end%>
+	<%end%>
+<%else %>
+	<p>You got no trips boyy</p>
+<%end%>
+
+
+<% if current_user %>
+	<%= button_to "Create trip", new_trip_path, :class => "button small", :method => :get %> 
+<% end %>
+
